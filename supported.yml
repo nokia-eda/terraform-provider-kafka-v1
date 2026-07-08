@@ -1,0 +1,41 @@
+datasources:
+  - model_name: app_group
+    oas_endpoint: /apps/kafka.eda.nokia.com
+    oas_schema: AppGroup
+  - model_name: resource_list
+    oas_endpoint: /apps/kafka.eda.nokia.com/v1
+    oas_schema: ResourceList
+  - model_name: cluster_producer_list
+    oas_endpoint: /apps/kafka.eda.nokia.com/v1/clusterproducers
+    oas_schema: com.nokia.eda.kafka.v1.ClusterProducerList
+  - model_name: cluster_producer
+    oas_endpoint: /apps/kafka.eda.nokia.com/v1/clusterproducers/{name}
+    oas_schema: com.nokia.eda.kafka.v1.ClusterProducer
+  - model_name: producer_list
+    oas_endpoint: /apps/kafka.eda.nokia.com/v1/namespaces/{namespace}/producers
+    oas_schema: com.nokia.eda.kafka.v1.ProducerList
+  - model_name: producer
+    oas_endpoint: /apps/kafka.eda.nokia.com/v1/namespaces/{namespace}/producers/{name}
+    oas_schema: com.nokia.eda.kafka.v1.Producer
+
+resources:
+  - model_name: cluster_producer
+    oas_endpoint: /apps/kafka.eda.nokia.com/v1/clusterproducers
+    oas_schema: com.nokia.eda.kafka.v1.ClusterProducer
+  - model_name: producer
+    oas_endpoint: /apps/kafka.eda.nokia.com/v1/namespaces/{namespace}/producers
+    oas_schema: com.nokia.eda.kafka.v1.Producer
+
+qualified:
+  datasources:
+    - oas_schema: IntentTargets
+      get: /apps/kafka.eda.nokia.com/v1/clusterproducers/{name}/_targets
+    - oas_schema: ResourceHistory
+      get: /apps/kafka.eda.nokia.com/v1/clusterproducers/{name}/_revs
+    - oas_schema: UIResult
+      get: /apps/kafka.eda.nokia.com/v1/_ui/{pathname}
+    - oas_schema: com.nokia.eda.kafka.v1.ClusterProducer_DeletedResources
+      get: /apps/kafka.eda.nokia.com/v1/clusterproducers/_deleted
+    - oas_schema: com.nokia.eda.kafka.v1.Producer_DeletedResources
+      get: /apps/kafka.eda.nokia.com/v1/namespaces/{namespace}/producers/_deleted
+  resources:
