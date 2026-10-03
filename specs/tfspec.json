@@ -184,32 +184,32 @@
                     {
                         "name": "spec",
                         "single_nested": {
-                            "computed_optional_required": "optional",
+                            "computed_optional_required": "computed",
                             "attributes": [
                                 {
                                     "name": "brokers",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Comma separated Kafka brokers list"
                                     }
                                 },
                                 {
                                     "name": "compression_codec",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Data compression codec"
                                     }
                                 },
                                 {
                                     "name": "exports",
                                     "list_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "nested_object": {
                                             "attributes": [
                                                 {
                                                     "name": "fields",
                                                     "list": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "element_type": {
                                                             "string": {}
                                                         },
@@ -219,35 +219,35 @@
                                                 {
                                                     "name": "mode",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Export Mode"
                                                     }
                                                 },
                                                 {
                                                     "name": "path",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "The EDB path to export, in the format '.namespace.node.srl.interface'"
                                                     }
                                                 },
                                                 {
                                                     "name": "period",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Export Period. A 1s minimum is enforced."
                                                     }
                                                 },
                                                 {
                                                     "name": "topic",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "A topic name to which the producer must write\nupdates from this export path"
                                                     }
                                                 },
                                                 {
                                                     "name": "where",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses."
                                                     }
                                                 }
@@ -259,54 +259,54 @@
                                 {
                                     "name": "flush_frequency",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "The best-effort frequency of flushes"
                                     }
                                 },
                                 {
                                     "name": "max_retry",
                                     "int64": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "The total number of times to retry sending a message"
                                     }
                                 },
                                 {
                                     "name": "required_acks",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Number of replica acknowledgements the broker must see before responding"
                                     }
                                 },
                                 {
                                     "name": "sasl",
                                     "single_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "attributes": [
                                             {
                                                 "name": "mechanism",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "description": "SASL Mechanism"
                                                 }
                                             },
                                             {
                                                 "name": "password",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "description": "SASL password"
                                                 }
                                             },
                                             {
                                                 "name": "token_url",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "description": "token url for OAUTHBEARER SASL mechanism"
                                                 }
                                             },
                                             {
                                                 "name": "user",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "description": "SASL user name"
                                                 }
                                             }
@@ -317,52 +317,52 @@
                                 {
                                     "name": "sync_producer",
                                     "bool": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Start a sync producer"
                                     }
                                 },
                                 {
                                     "name": "timeout",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Kafka producer timeout"
                                     }
                                 },
                                 {
                                     "name": "tls",
                                     "single_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "attributes": [
                                             {
                                                 "name": "from_files",
                                                 "single_nested": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "attributes": [
                                                         {
                                                             "name": "ca_file",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "Path to a certificate authority file."
                                                             }
                                                         },
                                                         {
                                                             "name": "cert_file",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "The client certificate file location."
                                                             }
                                                         },
                                                         {
                                                             "name": "key_file",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "The client private key location."
                                                             }
                                                         },
                                                         {
                                                             "name": "skip_verify",
                                                             "bool": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "If true the client will not verify the server's certificate."
                                                             }
                                                         }
@@ -373,14 +373,14 @@
                                             {
                                                 "name": "from_secret",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "description": "Secret containing a `tls.crt`, a `tls.key` and a `ca.crt` keys.\nBoth `tls.crt` and `tls.key` must be present.\nIf `ca.crt` is not present and `.trustBundle` is not set\nthe remote server certificate is not verified."
                                                 }
                                             },
                                             {
                                                 "name": "trust_bundle",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "description": "ConfigMap containing a set of trust bundles (key `trust-bundle.pem`) used to\nverify the remote server certificates."
                                                 }
                                             }
@@ -545,32 +545,32 @@
                                     {
                                         "name": "spec",
                                         "single_nested": {
-                                            "computed_optional_required": "optional",
+                                            "computed_optional_required": "computed",
                                             "attributes": [
                                                 {
                                                     "name": "brokers",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Comma separated Kafka brokers list"
                                                     }
                                                 },
                                                 {
                                                     "name": "compression_codec",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Data compression codec"
                                                     }
                                                 },
                                                 {
                                                     "name": "exports",
                                                     "list_nested": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "nested_object": {
                                                             "attributes": [
                                                                 {
                                                                     "name": "fields",
                                                                     "list": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "element_type": {
                                                                             "string": {}
                                                                         },
@@ -580,35 +580,35 @@
                                                                 {
                                                                     "name": "mode",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "Export Mode"
                                                                     }
                                                                 },
                                                                 {
                                                                     "name": "path",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "The EDB path to export, in the format '.namespace.node.srl.interface'"
                                                                     }
                                                                 },
                                                                 {
                                                                     "name": "period",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "Export Period. A 1s minimum is enforced."
                                                                     }
                                                                 },
                                                                 {
                                                                     "name": "topic",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "A topic name to which the producer must write\nupdates from this export path"
                                                                     }
                                                                 },
                                                                 {
                                                                     "name": "where",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses."
                                                                     }
                                                                 }
@@ -620,54 +620,54 @@
                                                 {
                                                     "name": "flush_frequency",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "The best-effort frequency of flushes"
                                                     }
                                                 },
                                                 {
                                                     "name": "max_retry",
                                                     "int64": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "The total number of times to retry sending a message"
                                                     }
                                                 },
                                                 {
                                                     "name": "required_acks",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Number of replica acknowledgements the broker must see before responding"
                                                     }
                                                 },
                                                 {
                                                     "name": "sasl",
                                                     "single_nested": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "attributes": [
                                                             {
                                                                 "name": "mechanism",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "SASL Mechanism"
                                                                 }
                                                             },
                                                             {
                                                                 "name": "password",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "SASL password"
                                                                 }
                                                             },
                                                             {
                                                                 "name": "token_url",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "token url for OAUTHBEARER SASL mechanism"
                                                                 }
                                                             },
                                                             {
                                                                 "name": "user",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "SASL user name"
                                                                 }
                                                             }
@@ -678,52 +678,52 @@
                                                 {
                                                     "name": "sync_producer",
                                                     "bool": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Start a sync producer"
                                                     }
                                                 },
                                                 {
                                                     "name": "timeout",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Kafka producer timeout"
                                                     }
                                                 },
                                                 {
                                                     "name": "tls",
                                                     "single_nested": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "attributes": [
                                                             {
                                                                 "name": "from_files",
                                                                 "single_nested": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "attributes": [
                                                                         {
                                                                             "name": "ca_file",
                                                                             "string": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "Path to a certificate authority file."
                                                                             }
                                                                         },
                                                                         {
                                                                             "name": "cert_file",
                                                                             "string": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "The client certificate file location."
                                                                             }
                                                                         },
                                                                         {
                                                                             "name": "key_file",
                                                                             "string": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "The client private key location."
                                                                             }
                                                                         },
                                                                         {
                                                                             "name": "skip_verify",
                                                                             "bool": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "If true the client will not verify the server's certificate."
                                                                             }
                                                                         }
@@ -734,14 +734,14 @@
                                                             {
                                                                 "name": "from_secret",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "Secret containing a `tls.crt`, a `tls.key` and a `ca.crt` keys.\nBoth `tls.crt` and `tls.key` must be present.\nIf `ca.crt` is not present and `.trustBundle` is not set\nthe remote server certificate is not verified."
                                                                 }
                                                             },
                                                             {
                                                                 "name": "trust_bundle",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "ConfigMap containing a set of trust bundles (key `trust-bundle.pem`) used to\nverify the remote server certificates."
                                                                 }
                                                             }
@@ -897,32 +897,32 @@
                     {
                         "name": "spec",
                         "single_nested": {
-                            "computed_optional_required": "optional",
+                            "computed_optional_required": "computed",
                             "attributes": [
                                 {
                                     "name": "brokers",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Comma separated Kafka brokers list"
                                     }
                                 },
                                 {
                                     "name": "compression_codec",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Data compression codec"
                                     }
                                 },
                                 {
                                     "name": "exports",
                                     "list_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "nested_object": {
                                             "attributes": [
                                                 {
                                                     "name": "fields",
                                                     "list": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "element_type": {
                                                             "string": {}
                                                         },
@@ -932,35 +932,35 @@
                                                 {
                                                     "name": "mode",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Export Mode"
                                                     }
                                                 },
                                                 {
                                                     "name": "path",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "The EDB path to export, in the format '.namespace.node.srl.interface'"
                                                     }
                                                 },
                                                 {
                                                     "name": "period",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Export Period. A 1s minimum is enforced."
                                                     }
                                                 },
                                                 {
                                                     "name": "topic",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "A topic name to which the producer must write\nupdates from this export path"
                                                     }
                                                 },
                                                 {
                                                     "name": "where",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses."
                                                     }
                                                 }
@@ -972,54 +972,54 @@
                                 {
                                     "name": "flush_frequency",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "The best-effort frequency of flushes"
                                     }
                                 },
                                 {
                                     "name": "max_retry",
                                     "int64": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "The total number of times to retry sending a message"
                                     }
                                 },
                                 {
                                     "name": "required_acks",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Number of replica acknowledgements the broker must see before responding"
                                     }
                                 },
                                 {
                                     "name": "sasl",
                                     "single_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "attributes": [
                                             {
                                                 "name": "mechanism",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "description": "SASL Mechanism"
                                                 }
                                             },
                                             {
                                                 "name": "password",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "description": "SASL password"
                                                 }
                                             },
                                             {
                                                 "name": "token_url",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "description": "token url for OAUTHBEARER SASL mechanism"
                                                 }
                                             },
                                             {
                                                 "name": "user",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "description": "SASL user name"
                                                 }
                                             }
@@ -1030,52 +1030,52 @@
                                 {
                                     "name": "sync_producer",
                                     "bool": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Start a sync producer"
                                     }
                                 },
                                 {
                                     "name": "timeout",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Kafka producer timeout"
                                     }
                                 },
                                 {
                                     "name": "tls",
                                     "single_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "attributes": [
                                             {
                                                 "name": "from_files",
                                                 "single_nested": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "attributes": [
                                                         {
                                                             "name": "ca_file",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "Path to a certificate authority file."
                                                             }
                                                         },
                                                         {
                                                             "name": "cert_file",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "The client certificate file location."
                                                             }
                                                         },
                                                         {
                                                             "name": "key_file",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "The client private key location."
                                                             }
                                                         },
                                                         {
                                                             "name": "skip_verify",
                                                             "bool": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed",
                                                                 "description": "If true the client will not verify the server's certificate."
                                                             }
                                                         }
@@ -1086,14 +1086,14 @@
                                             {
                                                 "name": "from_secret",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "description": "Secret containing a `tls.crt`, a `tls.key` and a `ca.crt` keys.\nBoth `tls.crt` and `tls.key` must be present.\nIf `ca.crt` is not present and `.trustBundle` is not set\nthe remote server certificate is not verified."
                                                 }
                                             },
                                             {
                                                 "name": "trust_bundle",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed",
                                                     "description": "ConfigMap containing a set of trust bundles (key `trust-bundle.pem`) used to\nverify the remote server certificates."
                                                 }
                                             }
@@ -1265,32 +1265,32 @@
                                     {
                                         "name": "spec",
                                         "single_nested": {
-                                            "computed_optional_required": "optional",
+                                            "computed_optional_required": "computed",
                                             "attributes": [
                                                 {
                                                     "name": "brokers",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Comma separated Kafka brokers list"
                                                     }
                                                 },
                                                 {
                                                     "name": "compression_codec",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Data compression codec"
                                                     }
                                                 },
                                                 {
                                                     "name": "exports",
                                                     "list_nested": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "nested_object": {
                                                             "attributes": [
                                                                 {
                                                                     "name": "fields",
                                                                     "list": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "element_type": {
                                                                             "string": {}
                                                                         },
@@ -1300,35 +1300,35 @@
                                                                 {
                                                                     "name": "mode",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "Export Mode"
                                                                     }
                                                                 },
                                                                 {
                                                                     "name": "path",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "The EDB path to export, in the format '.namespace.node.srl.interface'"
                                                                     }
                                                                 },
                                                                 {
                                                                     "name": "period",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "Export Period. A 1s minimum is enforced."
                                                                     }
                                                                 },
                                                                 {
                                                                     "name": "topic",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "A topic name to which the producer must write\nupdates from this export path"
                                                                     }
                                                                 },
                                                                 {
                                                                     "name": "where",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses."
                                                                     }
                                                                 }
@@ -1340,54 +1340,54 @@
                                                 {
                                                     "name": "flush_frequency",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "The best-effort frequency of flushes"
                                                     }
                                                 },
                                                 {
                                                     "name": "max_retry",
                                                     "int64": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "The total number of times to retry sending a message"
                                                     }
                                                 },
                                                 {
                                                     "name": "required_acks",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Number of replica acknowledgements the broker must see before responding"
                                                     }
                                                 },
                                                 {
                                                     "name": "sasl",
                                                     "single_nested": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "attributes": [
                                                             {
                                                                 "name": "mechanism",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "SASL Mechanism"
                                                                 }
                                                             },
                                                             {
                                                                 "name": "password",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "SASL password"
                                                                 }
                                                             },
                                                             {
                                                                 "name": "token_url",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "token url for OAUTHBEARER SASL mechanism"
                                                                 }
                                                             },
                                                             {
                                                                 "name": "user",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "SASL user name"
                                                                 }
                                                             }
@@ -1398,52 +1398,52 @@
                                                 {
                                                     "name": "sync_producer",
                                                     "bool": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Start a sync producer"
                                                     }
                                                 },
                                                 {
                                                     "name": "timeout",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Kafka producer timeout"
                                                     }
                                                 },
                                                 {
                                                     "name": "tls",
                                                     "single_nested": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "attributes": [
                                                             {
                                                                 "name": "from_files",
                                                                 "single_nested": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "attributes": [
                                                                         {
                                                                             "name": "ca_file",
                                                                             "string": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "Path to a certificate authority file."
                                                                             }
                                                                         },
                                                                         {
                                                                             "name": "cert_file",
                                                                             "string": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "The client certificate file location."
                                                                             }
                                                                         },
                                                                         {
                                                                             "name": "key_file",
                                                                             "string": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "The client private key location."
                                                                             }
                                                                         },
                                                                         {
                                                                             "name": "skip_verify",
                                                                             "bool": {
-                                                                                "computed_optional_required": "optional",
+                                                                                "computed_optional_required": "computed",
                                                                                 "description": "If true the client will not verify the server's certificate."
                                                                             }
                                                                         }
@@ -1454,14 +1454,14 @@
                                                             {
                                                                 "name": "from_secret",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "Secret containing a `tls.crt`, a `tls.key` and a `ca.crt` keys.\nBoth `tls.crt` and `tls.key` must be present.\nIf `ca.crt` is not present and `.trustBundle` is not set\nthe remote server certificate is not verified."
                                                                 }
                                                             },
                                                             {
                                                                 "name": "trust_bundle",
                                                                 "string": {
-                                                                    "computed_optional_required": "optional",
+                                                                    "computed_optional_required": "computed",
                                                                     "description": "ConfigMap containing a set of trust bundles (key `trust-bundle.pem`) used to\nverify the remote server certificates."
                                                                 }
                                                             }
@@ -1788,7 +1788,7 @@
                                                 {
                                                     "name": "fields",
                                                     "list": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed_optional",
                                                         "element_type": {
                                                             "string": {}
                                                         },
@@ -1844,7 +1844,7 @@
                                                 {
                                                     "name": "where",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed_optional",
                                                         "description": "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses."
                                                     }
                                                 }
@@ -1856,7 +1856,7 @@
                                 {
                                     "name": "flush_frequency",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "description": "The best-effort frequency of flushes"
                                     }
                                 },
@@ -1895,7 +1895,7 @@
                                 {
                                     "name": "sasl",
                                     "single_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "attributes": [
                                             {
                                                 "name": "mechanism",
@@ -1922,21 +1922,21 @@
                                             {
                                                 "name": "password",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed_optional",
                                                     "description": "SASL password"
                                                 }
                                             },
                                             {
                                                 "name": "token_url",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed_optional",
                                                     "description": "token url for OAUTHBEARER SASL mechanism"
                                                 }
                                             },
                                             {
                                                 "name": "user",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed_optional",
                                                     "description": "SASL user name"
                                                 }
                                             }
@@ -1947,7 +1947,7 @@
                                 {
                                     "name": "sync_producer",
                                     "bool": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "description": "Start a sync producer"
                                     }
                                 },
@@ -1964,38 +1964,38 @@
                                 {
                                     "name": "tls",
                                     "single_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "attributes": [
                                             {
                                                 "name": "from_files",
                                                 "single_nested": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed_optional",
                                                     "attributes": [
                                                         {
                                                             "name": "ca_file",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "description": "Path to a certificate authority file."
                                                             }
                                                         },
                                                         {
                                                             "name": "cert_file",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "description": "The client certificate file location."
                                                             }
                                                         },
                                                         {
                                                             "name": "key_file",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "description": "The client private key location."
                                                             }
                                                         },
                                                         {
                                                             "name": "skip_verify",
                                                             "bool": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "description": "If true the client will not verify the server's certificate."
                                                             }
                                                         }
@@ -2006,14 +2006,14 @@
                                             {
                                                 "name": "from_secret",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed_optional",
                                                     "description": "Secret containing a `tls.crt`, a `tls.key` and a `ca.crt` keys.\nBoth `tls.crt` and `tls.key` must be present.\nIf `ca.crt` is not present and `.trustBundle` is not set\nthe remote server certificate is not verified."
                                                 }
                                             },
                                             {
                                                 "name": "trust_bundle",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed_optional",
                                                     "description": "ConfigMap containing a set of trust bundles (key `trust-bundle.pem`) used to\nverify the remote server certificates."
                                                 }
                                             }
@@ -2258,7 +2258,7 @@
                                                 {
                                                     "name": "fields",
                                                     "list": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed_optional",
                                                         "element_type": {
                                                             "string": {}
                                                         },
@@ -2314,7 +2314,7 @@
                                                 {
                                                     "name": "where",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed_optional",
                                                         "description": "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses."
                                                     }
                                                 }
@@ -2326,7 +2326,7 @@
                                 {
                                     "name": "flush_frequency",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "description": "The best-effort frequency of flushes"
                                     }
                                 },
@@ -2365,7 +2365,7 @@
                                 {
                                     "name": "sasl",
                                     "single_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "attributes": [
                                             {
                                                 "name": "mechanism",
@@ -2392,21 +2392,21 @@
                                             {
                                                 "name": "password",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed_optional",
                                                     "description": "SASL password"
                                                 }
                                             },
                                             {
                                                 "name": "token_url",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed_optional",
                                                     "description": "token url for OAUTHBEARER SASL mechanism"
                                                 }
                                             },
                                             {
                                                 "name": "user",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed_optional",
                                                     "description": "SASL user name"
                                                 }
                                             }
@@ -2417,7 +2417,7 @@
                                 {
                                     "name": "sync_producer",
                                     "bool": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "description": "Start a sync producer"
                                     }
                                 },
@@ -2434,38 +2434,38 @@
                                 {
                                     "name": "tls",
                                     "single_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "attributes": [
                                             {
                                                 "name": "from_files",
                                                 "single_nested": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed_optional",
                                                     "attributes": [
                                                         {
                                                             "name": "ca_file",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "description": "Path to a certificate authority file."
                                                             }
                                                         },
                                                         {
                                                             "name": "cert_file",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "description": "The client certificate file location."
                                                             }
                                                         },
                                                         {
                                                             "name": "key_file",
                                                             "string": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "description": "The client private key location."
                                                             }
                                                         },
                                                         {
                                                             "name": "skip_verify",
                                                             "bool": {
-                                                                "computed_optional_required": "optional",
+                                                                "computed_optional_required": "computed_optional",
                                                                 "description": "If true the client will not verify the server's certificate."
                                                             }
                                                         }
@@ -2476,14 +2476,14 @@
                                             {
                                                 "name": "from_secret",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed_optional",
                                                     "description": "Secret containing a `tls.crt`, a `tls.key` and a `ca.crt` keys.\nBoth `tls.crt` and `tls.key` must be present.\nIf `ca.crt` is not present and `.trustBundle` is not set\nthe remote server certificate is not verified."
                                                 }
                                             },
                                             {
                                                 "name": "trust_bundle",
                                                 "string": {
-                                                    "computed_optional_required": "optional",
+                                                    "computed_optional_required": "computed_optional",
                                                     "description": "ConfigMap containing a set of trust bundles (key `trust-bundle.pem`) used to\nverify the remote server certificates."
                                                 }
                                             }

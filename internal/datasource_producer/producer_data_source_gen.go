@@ -102,12 +102,12 @@ func ProducerDataSourceSchema(ctx context.Context) schema.Schema {
 			"spec": schema.SingleNestedAttribute{
 				Attributes: map[string]schema.Attribute{
 					"brokers": schema.StringAttribute{
-						Optional:            true,
+						Computed:            true,
 						Description:         "Comma separated Kafka brokers list",
 						MarkdownDescription: "Comma separated Kafka brokers list",
 					},
 					"compression_codec": schema.StringAttribute{
-						Optional:            true,
+						Computed:            true,
 						Description:         "Data compression codec",
 						MarkdownDescription: "Data compression codec",
 					},
@@ -116,32 +116,32 @@ func ProducerDataSourceSchema(ctx context.Context) schema.Schema {
 							Attributes: map[string]schema.Attribute{
 								"fields": schema.ListAttribute{
 									ElementType:         types.StringType,
-									Optional:            true,
+									Computed:            true,
 									Description:         "list of fields to be exported from the configured EDB table.",
 									MarkdownDescription: "list of fields to be exported from the configured EDB table.",
 								},
 								"mode": schema.StringAttribute{
-									Optional:            true,
+									Computed:            true,
 									Description:         "Export Mode",
 									MarkdownDescription: "Export Mode",
 								},
 								"path": schema.StringAttribute{
-									Optional:            true,
+									Computed:            true,
 									Description:         "The EDB path to export, in the format '.namespace.node.srl.interface'",
 									MarkdownDescription: "The EDB path to export, in the format '.namespace.node.srl.interface'",
 								},
 								"period": schema.StringAttribute{
-									Optional:            true,
+									Computed:            true,
 									Description:         "Export Period. A 1s minimum is enforced.",
 									MarkdownDescription: "Export Period. A 1s minimum is enforced.",
 								},
 								"topic": schema.StringAttribute{
-									Optional:            true,
+									Computed:            true,
 									Description:         "A topic name to which the producer must write\nupdates from this export path",
 									MarkdownDescription: "A topic name to which the producer must write\nupdates from this export path",
 								},
 								"where": schema.StringAttribute{
-									Optional:            true,
+									Computed:            true,
 									Description:         "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses.",
 									MarkdownDescription: "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses.",
 								},
@@ -152,44 +152,44 @@ func ProducerDataSourceSchema(ctx context.Context) schema.Schema {
 								},
 							},
 						},
-						Optional:            true,
+						Computed:            true,
 						Description:         "Exports is the list of paths to be exported as well as the topic and mode for each.",
 						MarkdownDescription: "Exports is the list of paths to be exported as well as the topic and mode for each.",
 					},
 					"flush_frequency": schema.StringAttribute{
-						Optional:            true,
+						Computed:            true,
 						Description:         "The best-effort frequency of flushes",
 						MarkdownDescription: "The best-effort frequency of flushes",
 					},
 					"max_retry": schema.Int64Attribute{
-						Optional:            true,
+						Computed:            true,
 						Description:         "The total number of times to retry sending a message",
 						MarkdownDescription: "The total number of times to retry sending a message",
 					},
 					"required_acks": schema.StringAttribute{
-						Optional:            true,
+						Computed:            true,
 						Description:         "Number of replica acknowledgements the broker must see before responding",
 						MarkdownDescription: "Number of replica acknowledgements the broker must see before responding",
 					},
 					"sasl": schema.SingleNestedAttribute{
 						Attributes: map[string]schema.Attribute{
 							"mechanism": schema.StringAttribute{
-								Optional:            true,
+								Computed:            true,
 								Description:         "SASL Mechanism",
 								MarkdownDescription: "SASL Mechanism",
 							},
 							"password": schema.StringAttribute{
-								Optional:            true,
+								Computed:            true,
 								Description:         "SASL password",
 								MarkdownDescription: "SASL password",
 							},
 							"token_url": schema.StringAttribute{
-								Optional:            true,
+								Computed:            true,
 								Description:         "token url for OAUTHBEARER SASL mechanism",
 								MarkdownDescription: "token url for OAUTHBEARER SASL mechanism",
 							},
 							"user": schema.StringAttribute{
-								Optional:            true,
+								Computed:            true,
 								Description:         "SASL user name",
 								MarkdownDescription: "SASL user name",
 							},
@@ -199,17 +199,17 @@ func ProducerDataSourceSchema(ctx context.Context) schema.Schema {
 								AttrTypes: SaslValue{}.AttributeTypes(ctx),
 							},
 						},
-						Optional:            true,
+						Computed:            true,
 						Description:         "Kafka SASL configuration",
 						MarkdownDescription: "Kafka SASL configuration",
 					},
 					"sync_producer": schema.BoolAttribute{
-						Optional:            true,
+						Computed:            true,
 						Description:         "Start a sync producer",
 						MarkdownDescription: "Start a sync producer",
 					},
 					"timeout": schema.StringAttribute{
-						Optional:            true,
+						Computed:            true,
 						Description:         "Kafka producer timeout",
 						MarkdownDescription: "Kafka producer timeout",
 					},
@@ -218,22 +218,22 @@ func ProducerDataSourceSchema(ctx context.Context) schema.Schema {
 							"from_files": schema.SingleNestedAttribute{
 								Attributes: map[string]schema.Attribute{
 									"ca_file": schema.StringAttribute{
-										Optional:            true,
+										Computed:            true,
 										Description:         "Path to a certificate authority file.",
 										MarkdownDescription: "Path to a certificate authority file.",
 									},
 									"cert_file": schema.StringAttribute{
-										Optional:            true,
+										Computed:            true,
 										Description:         "The client certificate file location.",
 										MarkdownDescription: "The client certificate file location.",
 									},
 									"key_file": schema.StringAttribute{
-										Optional:            true,
+										Computed:            true,
 										Description:         "The client private key location.",
 										MarkdownDescription: "The client private key location.",
 									},
 									"skip_verify": schema.BoolAttribute{
-										Optional:            true,
+										Computed:            true,
 										Description:         "If true the client will not verify the server's certificate.",
 										MarkdownDescription: "If true the client will not verify the server's certificate.",
 									},
@@ -243,17 +243,17 @@ func ProducerDataSourceSchema(ctx context.Context) schema.Schema {
 										AttrTypes: FromFilesValue{}.AttributeTypes(ctx),
 									},
 								},
-								Optional:            true,
+								Computed:            true,
 								Description:         "Certificates files.",
 								MarkdownDescription: "Certificates files.",
 							},
 							"from_secret": schema.StringAttribute{
-								Optional:            true,
+								Computed:            true,
 								Description:         "Secret containing a `tls.crt`, a `tls.key` and a `ca.crt` keys.\nBoth `tls.crt` and `tls.key` must be present.\nIf `ca.crt` is not present and `.trustBundle` is not set\nthe remote server certificate is not verified.",
 								MarkdownDescription: "Secret containing a `tls.crt`, a `tls.key` and a `ca.crt` keys.\nBoth `tls.crt` and `tls.key` must be present.\nIf `ca.crt` is not present and `.trustBundle` is not set\nthe remote server certificate is not verified.",
 							},
 							"trust_bundle": schema.StringAttribute{
-								Optional:            true,
+								Computed:            true,
 								Description:         "ConfigMap containing a set of trust bundles (key `trust-bundle.pem`) used to\nverify the remote server certificates.",
 								MarkdownDescription: "ConfigMap containing a set of trust bundles (key `trust-bundle.pem`) used to\nverify the remote server certificates.",
 							},
@@ -263,7 +263,7 @@ func ProducerDataSourceSchema(ctx context.Context) schema.Schema {
 								AttrTypes: TlsValue{}.AttributeTypes(ctx),
 							},
 						},
-						Optional:            true,
+						Computed:            true,
 						Description:         "Kafka TLS configuration",
 						MarkdownDescription: "Kafka TLS configuration",
 					},
@@ -273,7 +273,7 @@ func ProducerDataSourceSchema(ctx context.Context) schema.Schema {
 						AttrTypes: SpecValue{}.AttributeTypes(ctx),
 					},
 				},
-				Optional:            true,
+				Computed:            true,
 				Description:         "spec defines the desired state of Producer",
 				MarkdownDescription: "spec defines the desired state of Producer",
 			},

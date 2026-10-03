@@ -151,6 +151,7 @@ func ClusterProducerResourceSchema(ctx context.Context) schema.Schema {
 								"fields": schema.ListAttribute{
 									ElementType:         types.StringType,
 									Optional:            true,
+									Computed:            true,
 									Description:         "list of fields to be exported from the configured EDB table.",
 									MarkdownDescription: "list of fields to be exported from the configured EDB table.",
 								},
@@ -187,6 +188,7 @@ func ClusterProducerResourceSchema(ctx context.Context) schema.Schema {
 								},
 								"where": schema.StringAttribute{
 									Optional:            true,
+									Computed:            true,
 									Description:         "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses.",
 									MarkdownDescription: "A where clause to use for the query, e.g. 'oper-state = down'. You can omit enclosing parentheses.",
 								},
@@ -203,6 +205,7 @@ func ClusterProducerResourceSchema(ctx context.Context) schema.Schema {
 					},
 					"flush_frequency": schema.StringAttribute{
 						Optional:            true,
+						Computed:            true,
 						Description:         "The best-effort frequency of flushes",
 						MarkdownDescription: "The best-effort frequency of flushes",
 					},
@@ -246,16 +249,19 @@ func ClusterProducerResourceSchema(ctx context.Context) schema.Schema {
 							},
 							"password": schema.StringAttribute{
 								Optional:            true,
+								Computed:            true,
 								Description:         "SASL password",
 								MarkdownDescription: "SASL password",
 							},
 							"token_url": schema.StringAttribute{
 								Optional:            true,
+								Computed:            true,
 								Description:         "token url for OAUTHBEARER SASL mechanism",
 								MarkdownDescription: "token url for OAUTHBEARER SASL mechanism",
 							},
 							"user": schema.StringAttribute{
 								Optional:            true,
+								Computed:            true,
 								Description:         "SASL user name",
 								MarkdownDescription: "SASL user name",
 							},
@@ -266,11 +272,13 @@ func ClusterProducerResourceSchema(ctx context.Context) schema.Schema {
 							},
 						},
 						Optional:            true,
+						Computed:            true,
 						Description:         "Kafka SASL configuration",
 						MarkdownDescription: "Kafka SASL configuration",
 					},
 					"sync_producer": schema.BoolAttribute{
 						Optional:            true,
+						Computed:            true,
 						Description:         "Start a sync producer",
 						MarkdownDescription: "Start a sync producer",
 					},
@@ -287,21 +295,25 @@ func ClusterProducerResourceSchema(ctx context.Context) schema.Schema {
 								Attributes: map[string]schema.Attribute{
 									"ca_file": schema.StringAttribute{
 										Optional:            true,
+										Computed:            true,
 										Description:         "Path to a certificate authority file.",
 										MarkdownDescription: "Path to a certificate authority file.",
 									},
 									"cert_file": schema.StringAttribute{
 										Optional:            true,
+										Computed:            true,
 										Description:         "The client certificate file location.",
 										MarkdownDescription: "The client certificate file location.",
 									},
 									"key_file": schema.StringAttribute{
 										Optional:            true,
+										Computed:            true,
 										Description:         "The client private key location.",
 										MarkdownDescription: "The client private key location.",
 									},
 									"skip_verify": schema.BoolAttribute{
 										Optional:            true,
+										Computed:            true,
 										Description:         "If true the client will not verify the server's certificate.",
 										MarkdownDescription: "If true the client will not verify the server's certificate.",
 									},
@@ -312,16 +324,19 @@ func ClusterProducerResourceSchema(ctx context.Context) schema.Schema {
 									},
 								},
 								Optional:            true,
+								Computed:            true,
 								Description:         "Certificates files.",
 								MarkdownDescription: "Certificates files.",
 							},
 							"from_secret": schema.StringAttribute{
 								Optional:            true,
+								Computed:            true,
 								Description:         "Secret containing a `tls.crt`, a `tls.key` and a `ca.crt` keys.\nBoth `tls.crt` and `tls.key` must be present.\nIf `ca.crt` is not present and `.trustBundle` is not set\nthe remote server certificate is not verified.",
 								MarkdownDescription: "Secret containing a `tls.crt`, a `tls.key` and a `ca.crt` keys.\nBoth `tls.crt` and `tls.key` must be present.\nIf `ca.crt` is not present and `.trustBundle` is not set\nthe remote server certificate is not verified.",
 							},
 							"trust_bundle": schema.StringAttribute{
 								Optional:            true,
+								Computed:            true,
 								Description:         "ConfigMap containing a set of trust bundles (key `trust-bundle.pem`) used to\nverify the remote server certificates.",
 								MarkdownDescription: "ConfigMap containing a set of trust bundles (key `trust-bundle.pem`) used to\nverify the remote server certificates.",
 							},
@@ -332,6 +347,7 @@ func ClusterProducerResourceSchema(ctx context.Context) schema.Schema {
 							},
 						},
 						Optional:            true,
+						Computed:            true,
 						Description:         "Kafka TLS configuration",
 						MarkdownDescription: "Kafka TLS configuration",
 					},
